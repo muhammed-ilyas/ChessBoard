@@ -1,6 +1,4 @@
-package com.aim.services;
-
-import com.aim.models.Cell;
+package com.aim.models;
 
 import java.util.Set;
 
