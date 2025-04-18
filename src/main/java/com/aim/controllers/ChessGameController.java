@@ -1,18 +1,13 @@
-package com.aim.controller;
+package com.aim.controllers;
 
 import com.aim.models.Cell;
-import com.aim.models.ChessBoard;
 import com.aim.models.ChessGame;
-import com.aim.service.ChessGameService;
-import com.aim.service.ChessGameServiceImpl;
-import com.aim.service.Piece;
+import com.aim.services.ChessGameService;
 
-import java.util.List;
 import java.util.Set;
 
 public class ChessGameController {
-    // This class will handle the chessboard logic
-    // It will include methods to initialize the ChessGame, next possible moves, and display the board
+
     private final ChessGameService chessGameService;
     private final ChessGame chessGame;
 

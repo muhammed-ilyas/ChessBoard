@@ -1,9 +1,15 @@
-package com.aim.service;
+package com.aim.services;
 
 import com.aim.enums.ChessPieceType;
+import com.aim.exceptions.InvalidCellException;
+import com.aim.exceptions.InvalidChessPieceException;
+import com.aim.exceptions.NoPossibleMovesException;
 import com.aim.models.Cell;
+import com.aim.models.King;
+import com.aim.models.Pawn;
+import com.aim.models.Piece;
+import com.aim.models.Queen;
 
-import java.util.List;
 import java.util.Set;
 
 public class ChessGameServiceImpl implements ChessGameService{
@@ -13,11 +19,11 @@ public class ChessGameServiceImpl implements ChessGameService{
         Piece piece = getPiece(pieceType);
         Cell currentCell = Cell.fromChessNotation(currentPosition);
         if (!currentCell.isValidCell()) {
-            throw new IllegalArgumentException("Invalid cell position: " + currentPosition);
+            throw new InvalidCellException("Invalid cell position: " + currentPosition);
         }
         Set<Cell> possibleMoves = piece.nextPossibleMoves(currentCell);
         if (possibleMoves.isEmpty()) {
-            throw new IllegalArgumentException("No possible moves for the piece "+pieceType+" at position: " + currentPosition);
+            throw new NoPossibleMovesException("No possible moves for the piece "+pieceType+" at position: " + currentPosition);
         }
         return possibleMoves;
     }
@@ -29,7 +35,7 @@ public class ChessGameServiceImpl implements ChessGameService{
             case KING -> new King();
             case QUEEN -> new Queen();
             // Add other cases for different piece types
-            default -> throw new IllegalArgumentException("Invalid piece type: " + pieceType);
+            default -> throw new InvalidChessPieceException("Invalid piece type: " + pieceType);
         };
     }
 }

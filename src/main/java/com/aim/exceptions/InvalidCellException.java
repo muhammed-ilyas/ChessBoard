@@ -1,4 +1,7 @@
 package com.aim.exceptions;
 
-public class InvalidCellException {
+public class InvalidCellException extends RuntimeException {
+    public InvalidCellException(String message) {
+        super(message);
+    }
 }
