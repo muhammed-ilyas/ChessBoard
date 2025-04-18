@@ -14,6 +14,13 @@ import java.util.Set;
 
 public class ChessGameServiceImpl implements ChessGameService{
 
+    /**
+     * This method returns the next possible moves for a given chess piece at a specified position.
+     * It first checks if the cell position is valid, and if not, throws an InvalidCellException.
+     * Then, it retrieves the piece type and calculates the possible moves.
+     * If there are no possible moves, it throws a NoPossibleMovesException.
+     * Finally, it returns the set of possible moves.
+     */
     @Override
     public Set<Cell> nextPossibleMoves(String pieceType, String currentPosition) {
         Piece piece = getPiece(pieceType);
@@ -28,6 +35,11 @@ public class ChessGameServiceImpl implements ChessGameService{
         return possibleMoves;
     }
 
+    /**
+     * This method retrieves the chess piece based on the provided piece type.
+     * It uses a switch statement to return the appropriate piece object.
+     * If the piece type is invalid, it throws an InvalidChessPieceException.
+     */
     @Override
     public Piece getPiece(String pieceType) {
         return switch (ChessPieceType.fromString(pieceType)) {

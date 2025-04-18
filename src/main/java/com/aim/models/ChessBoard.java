@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * ChessBoard class represents a chessboard with a specified number of rows and columns.
+ * It provides methods to initialize the board, print the board, and retrieve the cells.
+ */
 public class ChessBoard {
     private final List<List<Cell>> cells;
     private final int rows;

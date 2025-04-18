@@ -8,6 +8,10 @@ import com.aim.services.ChessGameServiceImpl;
 
 import java.util.Scanner;
 
+/**
+ * Main class to run the Chess Game application.
+ * It initializes the game, displays the board, and handles user input for moves.
+ */
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the Chess Game!");

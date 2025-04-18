@@ -2,6 +2,10 @@ package com.aim.models;
 
 import com.aim.enums.GameState;
 
+/***
+ * ChessGame class represents a chess game.
+ * It contains a chessboard and the current game state.
+ */
 public class ChessGame {
     private final ChessBoard chessBoard;
     private GameState gameState;

@@ -1,5 +1,8 @@
 package com.aim.enums;
 
+/***
+ * ChessPieceType is an enumeration that represents the different types of chess pieces.
+ */
 public enum ChessPieceType {
     KING("King"),
     QUEEN("Queen"),
