@@ -69,3 +69,4 @@ To add support for new chess pieces:
 ## Technologies Used
 1. Java: Programming language.
 2. Maven: Build and dependency management tool.
+3. JUnit: Testing framework for unit tests.
