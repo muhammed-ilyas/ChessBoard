@@ -1,7 +1,6 @@
-package com.aim.services;
+package com.aim.models;
 
 
-import com.aim.models.Cell;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
